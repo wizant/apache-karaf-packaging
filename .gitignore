@@ -1,3 +1,17 @@
+build
+dl
+dist
+output
+target
+*~
+*.project
+*.settings
+*.classpath
+
+bigtop-packages/src/deb/karaf/source
+bigtop-packages/src/deb/source
+
+# Java binary Files
 *.class
 
 # Package Files #
