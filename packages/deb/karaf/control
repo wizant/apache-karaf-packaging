@@ -7,7 +7,7 @@ Standards-Version: 3.7.3
 
 Package: karaf
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: adduser, ${shlibs:Depends}, ${misc:Depends}
 Description: Apache Karaf
  Apache Karaf is a small OSGi based runtime which provides a lightweight 
  container onto which various components and applications can be deployed.
