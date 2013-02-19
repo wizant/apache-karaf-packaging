@@ -107,7 +107,8 @@ $(BUILD_DIR)/%/.sdeb:
            echo    "  * Initial release of Apache Karaf $(PKG_PKG_VERSION)-$($(PKG)_RELEASE) debian package" && \
            echo    "" && \
            echo    " -- $(MAINTAINER_NAME) <$(MAINTAINER_EMAIL)>  "`date +'%a, %d %b %Y %T %z'`) > debian/changelog && \
-	  find debian -name "*.[ex,EX,~]" | xargs rm -f && \
+	  find debian -name "*.[ex,EX]" | xargs rm -f && \
+	  find debian -name "*~" | xargs rm -f && \
 	  dpkg-buildpackage -uc -us -sa -S
 	mkdir -p $($(PKG)_OUTPUT_DIR)/
 	for file in $($(PKG)_PKG_NAME)_$(PKG_PKG_VERSION)-$($(PKG)_RELEASE).dsc \
