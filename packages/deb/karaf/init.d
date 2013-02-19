@@ -72,7 +72,7 @@ case "$1" in
 	restart)
 		do_restart
 		;;
-	force_reload)
+	force-reload)
 		do_reload
 		;;
 	*)
