@@ -1,11 +1,11 @@
-Source: apache-karaf
+Source: karaf
 Section: devel
 Priority: extra
 Maintainer: Alexandru Zbarcea <zbarcea.a@gmail.com>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.7.3
 
-Package: apache-karaf
+Package: karaf
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Apache Karaf
