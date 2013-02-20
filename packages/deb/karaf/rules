@@ -35,6 +35,7 @@ override_dh_auto_build:
 
 
 override_dh_auto_install:
+	@echo "using --build-dir: ${PWD}"
 	sh -x debian/install_karaf.sh \
 	  --build-dir=$${PWD} \
 	  --prefix=debian/karaf

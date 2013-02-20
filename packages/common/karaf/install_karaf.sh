@@ -93,10 +93,24 @@ done
 
 MAN_DIR=${MAN_DIR:-/usr/share/man/man1}
 DOC_DIR=${DOC_DIR:-/usr/share/doc/karaf}
+SHARE_DIR=${LIB_DIR:-/usr/share/karaf}
+
 LIB_DIR=${LIB_DIR:-/usr/lib/karaf}
+
 BIN_DIR=${BIN_DIR:-/usr/lib/karaf/bin}
+
 CONF_DIST_DIR=/etc/karaf/conf.dist/
 ETC_DIR=${ETC_DIR:-/etc/karaf}
 
 VAR_DIR=${VAR_DIR:-/var/lib/karaf}
 LOG_DIR=${LOG_DIR:-/var/log/karaf}
+
+install -d -m 0755 $PREFIX/$LIB_DIR
+
+install -d -m 0755 $PREFIX/$BIN_DIR
+cp -ra ${BUILD_DIR}/bin $PREFIX/$BIN_DIR
+
+install -d -m 0755 $PREFIX/$SHARE_DIR
+
+install -d -m 0755 $PREFIX/$SHARE_DIR/lib
+cp -ra ${BUILD_DIR}/lib $PREFIX/$SHARE_DIR/lib
