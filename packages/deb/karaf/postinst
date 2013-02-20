@@ -22,7 +22,7 @@ set -e
 case "$1" in
     configure)
         # Install config alternatives
-        update-alternatives  --install /etc/karaf/conf karaf-conf /etc/karaf/conf.empty 30
+        # update-alternatives  --install /etc/karaf/conf karaf-conf /etc/karaf/conf.empty 30
 
     ;;
 
