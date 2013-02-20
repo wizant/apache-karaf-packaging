@@ -108,6 +108,7 @@ cp -ra ${BUILD_DIR}/bin $PREFIX$BIN_DIR
 
 install -d -m 0755 $PREFIX$SHARE_DIR
 cp -ra ${BUILD_DIR}/system $PREFIX$SHARE_DIR
+cp -ra ${BUILD_DIR}/deploy $PREFIX$SHARE_DIR
 
 install -d -m 0755 $PREFIX$KARAF_LIB
 cp -ra ${BUILD_DIR}/lib $PREFIX$KARAF_LIB
@@ -117,5 +118,7 @@ install -d -m 0755 $PREFIX$SHARE_DIR
 cp -ra ${BUILD_DIR}/etc $PREFIX$SHARE_DIR
 
 install -d -m 0755 $PREFIX$ETC_DIR
-
 ln -s $(echo $PREFIX${SHARE_DIR}/etc/*) $PREFIX${ETC_DIR}/
+
+install -d -m 0755 $PREFIX$DATA_DIR
+cp -ra ${BUILD_DIR}/data $PREFIX$VAR_DIR
