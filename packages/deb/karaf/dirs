@@ -1,12 +1,5 @@
-/usr
-/usr/lib
 /usr/lib/karaf
-/usr/share
 /usr/share/karaf
-/etc
 /etc/init.d
-/var
-/var/lib
 /var/lib/karaf
-/var/log
 /var/log/karaf
