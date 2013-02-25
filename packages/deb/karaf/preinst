@@ -37,7 +37,7 @@ case "$1" in
                 adduser \
                   --system \
                   --group \
-                  --home /var/lib/karaf \
+                  --home /usr/share/karaf \
                   --gecos "Karaf User" \
                   --shell /bin/false \
                   karaf >/dev/null
