@@ -35,7 +35,14 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-      update-alternatives --remove karaf-conf /etc/karaf/conf.empty || :
+		update-alternatives --remove karaf-conf /etc/karaf/conf.empty || :
+		
+		if getent passwd karaf >/dev/null; then
+			# Removing system user: karaf .
+			deluser \
+				--system \
+				karaf
+		fi      
     ;;
 
     failed-upgrade)
