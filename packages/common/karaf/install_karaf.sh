@@ -105,6 +105,13 @@ LOG_DIR=${LOG_DIR:-/var/log/karaf}
 install -d -m 0755 $PREFIX$LIB_DIR
 install -d -m 0755 $PREFIX$BIN_DIR
 cp -ra ${BUILD_DIR}/bin $PREFIX$BIN_DIR
+ln -s $PREFIX$BIN_DIR/admin /usr/bin/karaf-admin
+ln -s $PREFIX$BIN_DIR/client /usr/bin/karaf-client
+ln -s $PREFIX$BIN_DIR/karaf /usr/bin/karaf-karaf
+ln -s $PREFIX$BIN_DIR/setenv /usr/bin/karaf-setenv
+ln -s $PREFIX$BIN_DIR/shell /usr/bin/karaf-shell
+ln -s $PREFIX$BIN_DIR/start /usr/bin/karaf-start
+ln -s $PREFIX$BIN_DIR/stop /usr/bin/karaf-stop
 
 install -d -m 0755 $PREFIX$SHARE_DIR
 cp -ra ${BUILD_DIR}/system $PREFIX$SHARE_DIR

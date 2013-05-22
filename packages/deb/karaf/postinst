@@ -19,6 +19,10 @@
 
 set -e
 
+KARAF_USER=karaf
+KARAF_GROUP=karaf
+KARAF_HOME=/usr/share/apache-karaf
+
 case "$1" in
     configure)
         # Install config alternatives
